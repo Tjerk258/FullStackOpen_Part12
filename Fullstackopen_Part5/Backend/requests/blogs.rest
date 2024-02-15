@@ -1,0 +1,17 @@
+Post http://localhost:3001/api/blogs HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphbiBwaWV0IiwiaWQiOiI2NWExMjc3OTkzOWY1ZTc4ZmZjZDBjMGUiLCJpYXQiOjE3MDUwNjAyMjZ9.W43pEaaYsRvIRHIxczNDHRx5Hej6GwYjkfNCqr64550
+
+{
+    "title": "de 3e hallo van het jaar",
+    "author": "piet pas",
+    "url": "https://hallo2.com",
+    "likes": 50
+}
+
+###
+GET http://localhost:3001/api/blogs
+
+###
+DELETE http://localhost:3001/api/blogs/65a127d62eff2bbf2c21aee3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphbiBrYXQiLCJpZCI6IjY1YTEyOTg2NzIxZWNiYmNmYzIwM2M1NyIsImlhdCI6MTcwNTA2MDc1MH0.9SwJZ-V6Kz7pNfYCQqsW5XOhhtAAp8AZBEF4c3XJy_o

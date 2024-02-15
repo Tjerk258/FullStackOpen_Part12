@@ -1,0 +1,24 @@
+services:
+  frontend:
+    image: part5-frontend-dev
+    volumes:
+      - ./Frontend:/usr/src/app
+    environment:
+      REACT_APP_BACKEND_URL: http://localhost:8080/api
+
+  backend:                    # The name of the service, can be anything
+    image: part5-backend-dev
+    volumes:
+      - ./Backend:/usr/src/app
+    
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+
+    depends_on:
+      - frontend
+      - backend
